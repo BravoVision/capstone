@@ -6,6 +6,7 @@ import Home from './Home'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When Home renders", () => {
+
   it("displays a heading", () => {
     const home = shallow(<Home />)
     const homeHeading = home.find("h1")
