@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import HomeImage from '../assets/home.svg'
-import { Container, Image, Nav, Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap'
+import home_image from '../assets/home.png'
+import { Container, Nav, Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap'
 
 class Header extends Component {
     render() {
@@ -35,7 +35,7 @@ class Header extends Component {
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/">
-                                    <img src={HomeImage} alt="home link" />
+                                    <img src={home_image} alt="home link" />
                                 </NavLink>
                             </NavItem>
                             {logged_in &&

@@ -9,7 +9,7 @@ class NotFound extends Component {
             <Container>
                 <img src={NotFoundImg} alt="404 Not Found" width="50%"/>
                 <h1>404</h1>
-                <h1>NotFound</h1>
+                <h2>NotFound</h2>
             </Container>    
             </>
         );
