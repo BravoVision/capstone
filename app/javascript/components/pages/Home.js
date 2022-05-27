@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Button, Row, Col, NavItem } from 'reactstrap'
 import phone_image from '../assets/phone.jpg'
 import logo from '../assets/Logo.png'
-import { NavLink } from 'react-router-dom'
+
 
 class Home extends Component {
     render() {
@@ -19,9 +19,9 @@ class Home extends Component {
                     <Row>
                         <Col md="8">
 
-                            <h1>
+                            
                                 <img src={logo} alt="Eventually" />
-                            </h1>
+                            
 
                             <h3>Your personal online to-do list.</h3>
                             <h4>A Place to keep track of life, and handle things... eventually.</h4>
