@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, CardTitle, Card, Container, Button } from 'reactstrap'
+import { Row, Col, CardTitle, Card, Container, Button, Nav } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
 class TaskIndex extends Component {
@@ -10,11 +10,11 @@ class TaskIndex extends Component {
                 <Container>
                     <h1>Task Index</h1>
                     <br />
-                    <a href="/task_new" >
+                    <NavLink to="/task_new">
                         <Button color="primary">
                             Create New Task
                         </Button>
-                    </a>
+                    </NavLink>
                     <br />
 
                     {this.props.tasks?.map(task => {

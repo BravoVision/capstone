@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Container } from 'reactstrap'
-import TaskIndex from './TaskIndex';
+import { NavLink } from 'react-router-dom'
+
 
 class TaskShow extends Component {
     render() {
@@ -14,17 +15,17 @@ class TaskShow extends Component {
                     <h3>Title:  {task?.title}</h3>
                     <h3>Details: {task?.details}</h3>
 
-                    <a href="/task_index" >
+                    <NavLink to="/task_index">
                         <Button color="primary">
                             Go Back
                         </Button>
-                    </a>
+                    </NavLink>
                     {' '}
-                    <a href="/task_edit" >
+                    <NavLink to="/task_edit">
                         <Button color="warning">
                             Update Task
                         </Button>
-                    </a>
+                    </NavLink>
                     {' '}
                     <Button
                         color="danger"
