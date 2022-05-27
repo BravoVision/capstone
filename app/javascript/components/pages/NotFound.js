@@ -3,6 +3,14 @@ import { Container } from 'reactstrap'
 import  NotFoundImg  from '../assets/Eventually.jpg'
 
 class NotFound extends Component {
+
+
+    componentDidMount(){
+        if (!this.props.logged_in){
+            window.location.replace('/users/sign_in')
+        }
+    }
+
     render() {
         return (
             <>

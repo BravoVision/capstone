@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Button, Row, Col, NavItem } from 'reactstrap'
+import { Container, Button, Row, Col } from 'reactstrap'
 import phone_image from '../assets/phone.jpg'
 import logo from '../assets/Logo.png'
 
