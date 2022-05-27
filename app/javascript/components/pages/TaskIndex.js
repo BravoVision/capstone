@@ -17,7 +17,7 @@ class TaskIndex extends Component {
                     </a>
                     <br />
 
-                    {this.props.tasks && this.props.tasks.map(task => {
+                    {this.props.tasks?.map(task => {
                         return (
                             <Row key={task.id}>
                                 <Col md="6">

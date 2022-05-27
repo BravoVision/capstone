@@ -11,8 +11,8 @@ class TaskShow extends Component {
             <>
                 <Container>
                     <h1>TaskShow</h1>
-                    <h3>Title:  {task && task.title}</h3>
-                    <h3>Details: {task && task.details}</h3>
+                    <h3>Title:  {task?.title}</h3>
+                    <h3>Details: {task?.details}</h3>
 
                     <a href="/task_index" >
                         <Button color="primary">
