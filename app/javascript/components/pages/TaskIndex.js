@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, CardTitle, Card, Container } from 'reactstrap'
+import { Row, Col, CardTitle, Card, Container, Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
 class TaskIndex extends Component {
@@ -7,25 +7,31 @@ class TaskIndex extends Component {
     render() {
         return (
             <>
-            <Container>
-                <h1>Task Index</h1>
-                <br />  
+                <Container>
+                    <h1>Task Index</h1>
+                    <br />
+                    <a href="/task_new" >
+                        <Button color="primary">
+                            Create New Task
+                        </Button>
+                    </a>
+                    <br />
 
-                {this.props.tasks && this.props.tasks.map(task => {
-                    return (
-                        <Row key={task.id}>
-                            <Col md="6">
-                                <Card body>
-                                    <CardTitle>
-                                        <NavLink to={`/task_show/${task.id}`} >
-                                            <h4>{task.title}</h4>
-                                        </NavLink>
-                                    </CardTitle>
-                                </Card>
-                            </Col>
-                        </Row>
-                    )
-                })}
+                    {this.props.tasks && this.props.tasks.map(task => {
+                        return (
+                            <Row key={task.id}>
+                                <Col md="6">
+                                    <Card body>
+                                        <CardTitle>
+                                            <NavLink to={`/task_show/${task.id}`} >
+                                                <h4>{task.title}</h4>
+                                            </NavLink>
+                                        </CardTitle>
+                                    </Card>
+                                </Col>
+                            </Row>
+                        )
+                    })}
                 </Container>
             </>
         );

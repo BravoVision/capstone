@@ -13,6 +13,9 @@ class Header extends Component {
             sign_out_route
         } = this.props
 
+
+        const homeLink = logged_in ? '/task_index' : '/'
+
         return (
             <>
                 <Container>
@@ -21,7 +24,7 @@ class Header extends Component {
                         expand="md"
                         light
                     >
-                        <NavbarBrand href="/">
+                        <NavbarBrand href={homeLink}>
                             Eventually...
                         </NavbarBrand>
                         <Nav
@@ -33,11 +36,13 @@ class Header extends Component {
                                     ABOUT US
                                 </NavLink>
                             </NavItem>
+
                             <NavItem>
-                                <NavLink href="/">
-                                    <img src={home_image} alt="home link" />
-                                </NavLink>
+                                    <NavLink href={homeLink}>
+                                        <img src={home_image} alt="home link" />
+                                    </NavLink>
                             </NavItem>
+
                             {logged_in &&
                                 <NavItem>
                                     <a href={sign_out_route} className="nav-link">Sign Out</a>

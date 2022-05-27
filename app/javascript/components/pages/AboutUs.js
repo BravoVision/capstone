@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container, CardGroup, Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, CardText } from 'reactstrap'
 
 class AboutUs extends Component {
+
     render() {
         return (
             <>

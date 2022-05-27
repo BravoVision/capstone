@@ -4,7 +4,7 @@ import TaskIndex from './TaskIndex';
 
 class TaskShow extends Component {
     render() {
-        
+
         let { task } = this.props
 
         return (
@@ -13,20 +13,18 @@ class TaskShow extends Component {
                     <h1>TaskShow</h1>
                     <h3>Title:  {task && task.title}</h3>
                     <h3>Details: {task && task.details}</h3>
-                    
+
                     <a href="/task_index" >
-                    <Button
-                        color="primary"
-                    >
-                        Go Back
-                    </Button>
+                        <Button color="primary">
+                            Go Back
+                        </Button>
                     </a>
                     {' '}
-                    <Button
-                        color="warning"
-                    >
-                        Update Task
-                    </Button>
+                    <a href="/task_edit" >
+                        <Button color="warning">
+                            Update Task
+                        </Button>
+                    </a>
                     {' '}
                     <Button
                         color="danger"
