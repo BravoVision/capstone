@@ -17,6 +17,25 @@ import {
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      tasks: []
+    }
+  }
+
+  componentDidMount() {
+    this.readTask()
+  }
+
+  readTask = () => {
+    fetch("/tasks")
+      .then(response => response.json())
+      .then(taskArray => this.setState({ tasks: taskArray }))
+      .catch(errors => console.log("Task read errors:", errors))
+  }
+
+
   render () {
     const {
       logged_in,
@@ -31,8 +50,17 @@ class App extends React.Component {
       <Header {...this.props} />
       <Switch>
         <Route exact path="/" render={(props) => <Home {...this.props} />} />
-        <Route path="/task_index" component={TaskIndex} />
-        <Route path="/task_show" component={TaskShow} />
+        <Route 
+          path="/task_index" 
+          render={(props) => <TaskIndex tasks={this.state.tasks} />}
+        />
+        <Route 
+          path="/task_show/:id"        
+          render={(props) => {
+            let id = props.match.params.id
+            let task = this.state.tasks.find(taskObject => taskObject.id === +id)
+            return <TaskShow task={task}/> }} 
+        />
         <Route path="/task_new" component={TaskNew} />
         <Route path="/task_edit" component={TaskEdit} />
         <Route path="/about_us" component={AboutUs} />
