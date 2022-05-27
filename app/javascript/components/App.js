@@ -18,15 +18,19 @@ import {
 
 class App extends React.Component {
   render () {
+    const {
+      logged_in,
+      current_user,
+      new_user_route,
+      sign_in_route,
+      sign_out_route
+    } = this.props
 
-
-
-    
     return (
       <Router>
       <Header {...this.props} />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" render={(props) => <Home {...this.props} />} />
         <Route path="/task_index" component={TaskIndex} />
         <Route path="/task_show" component={TaskShow} />
         <Route path="/task_new" component={TaskNew} />
