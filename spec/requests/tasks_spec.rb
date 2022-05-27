@@ -16,4 +16,50 @@ RSpec.describe "Tasks", type: :request do
       expect(task.length).to eq(1)
     end
   end
+
+  describe "POST /create" do
+    it 'can create a new task' do
+      task_params = {
+        task: {
+          title: 'Fangs',
+          details: 'Remember to pick up gold grill from the jeweler'
+        }
+      }
+      post '/tasks', params: task_params
+      task = Task.first
+      expect(response).to have_http_status(200)
+      expect(task.title).to eq('Fangs')
+      expect(task.details).to eq('Remember to pick up gold grill from the jeweler')
+    end
+
+    it "cannot create a task without a title" do
+      task_params = {
+        task: {
+          details: 'Remember to pick up gold grill from the jeweler'
+        }
+      }
+      post '/tasks', params: task_params
+
+      expect(response).to have_http_status(422)
+      json = JSON.parse(response.body)
+      expect(json['title']).to include "can't be blank"
+    end
+
+    it "cannot create a task without details" do
+      task_params = {
+        task: {
+          title: 'Fangs'
+        }
+      }
+      post '/tasks', params: task_params
+
+      expect(response).to have_http_status(422)
+      json = JSON.parse(response.body)
+      expect(json['details']).to include "can't be blank"
+    end
+
+  end
+
+
+  
 end
