@@ -25,7 +25,6 @@ class TaskEdit extends Component {
       handleSubmit = () => {
         this.props.updateTask(this.state.updateTask, this.props.task.id);
         this.setState({ submitted: true });
-        console.log(this.state.updateTask);
       };
     
       render() {
