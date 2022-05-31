@@ -7,8 +7,9 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe("When TaskNew renders", () => {
   let taskNew;
+  let currentUser = {id: 1}
   beforeEach(() => {
-    taskNew = shallow(<TaskNew />);
+    taskNew = shallow(<TaskNew current_user={currentUser} />);
   });
 
   it("displays a heading", () => {

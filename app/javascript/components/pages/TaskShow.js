@@ -21,7 +21,7 @@ class TaskShow extends Component {
                         </Button>
                     </NavLink>
                     {' '}
-                    <NavLink to="/task_edit">
+                    <NavLink to={`/task_edit/${task.id}`}>
                         <Button color="warning">
                             Update Task
                         </Button>

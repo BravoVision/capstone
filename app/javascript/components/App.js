@@ -28,7 +28,8 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((taskArray) => this.setState({ tasks: taskArray }))
       .catch((errors) => console.log("Task read errors:", errors));
-  };
+  }
+
   createTask = (newlyCreatedTask) => {
     console.log(newlyCreatedTask);
     fetch("/tasks", {
@@ -41,7 +42,20 @@ class App extends React.Component {
       .then((response) => response.json())
       .then(() => this.readTask())
       .catch((errors) => console.log("Task create errors:", errors));
-  };
+  }
+  
+  updateTask = (newlyUpdatedTask, id) => {
+    fetch(`/tasks/${id}`, {
+      body: JSON.stringify(newlyUpdatedTask),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(() => this.readTask())
+    .catch(errors => console.log("Task update errors:", errors))
+  }
 
   render() {
     const {
@@ -80,11 +94,33 @@ class App extends React.Component {
           {logged_in && (
             <Route
               path="/task_new"
-              render={() => <TaskNew current_user={current_user} createTask={this.createTask} />}
+              render={() => (
+                <TaskNew
+                  current_user={current_user}
+                  createTask={this.createTask}
+                />
+              )}
             />
           )}
 
-          {logged_in && <Route path="/task_edit" component={TaskEdit} />}
+          {logged_in && (
+            <Route
+              path="/task_edit/:id"
+              render={(props) => {
+                let id = +props.match.params.id;
+                let task = this.state.tasks.find(
+                  taskObject => taskObject.id === id
+                );
+                return (
+                  <TaskEdit
+                    task={task}
+                    updateTask={this.updateTask}
+                    current_user={current_user}
+                  />
+                );
+              }}
+            />
+          )}
 
           <Route path="/about_us" component={AboutUs} />
 
