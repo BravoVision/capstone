@@ -9,6 +9,7 @@ class TaskNew extends Component {
       newTask: {
         title: "",
         details: "",
+        user_id: this.props.current_user.id
       },
       submitted: false,
     };

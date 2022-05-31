@@ -51,7 +51,6 @@ class App extends React.Component {
       sign_in_route,
       sign_out_route,
     } = this.props;
-
     return (
       <Router>
         <Header {...this.props} />
@@ -81,7 +80,7 @@ class App extends React.Component {
           {logged_in && (
             <Route
               path="/task_new"
-              render={() => <TaskNew createTask={this.createTask} />}
+              render={() => <TaskNew current_user={current_user} createTask={this.createTask} />}
             />
           )}
 

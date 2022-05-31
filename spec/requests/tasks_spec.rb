@@ -19,15 +19,16 @@ RSpec.describe "Tasks", type: :request do
 
   describe "POST /create" do
     it 'can create a new task' do
-      task_params = {
-        task: {
-          title: 'Fangs',
-          details: 'Remember to pick up gold grill from the jeweler'
-        }
-      }
+      user = User.where(email: 'test@test.test').first_or_create(password: '12345678', password_confirmation: '12345678')
+
+      user.tasks.create(
+        title: 'Fangs',
+        details: 'Remember to pick up gold grill from the jeweler',
+      )
+
       post '/tasks', params: task_params
-      task = Task.first
       expect(response).to have_http_status(200)
+      task = Task.first
       expect(task.title).to eq('Fangs')
       expect(task.details).to eq('Remember to pick up gold grill from the jeweler')
     end
