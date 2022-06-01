@@ -16,6 +16,7 @@ class TasksController < ApplicationController
     def update
         task = Task.find(params[:id])
         task.update(task_params)
+
         if task.valid?
             render json: task
         else
