@@ -4,6 +4,11 @@ import { NavLink } from 'react-router-dom'
 
 
 class TaskShow extends Component {
+
+    handleSubmit = () => {
+        this.props.deleteTask(this.props.task.id)
+      }
+
     render() {
 
         let { task } = this.props
@@ -27,11 +32,13 @@ class TaskShow extends Component {
                         </Button>
                     </NavLink>
                     {' '}
-                    <Button
-                        color="danger"
-                    >
-                        Delete Task
-                    </Button>
+                    <NavLink to={task && "/task_index"}>
+                            <Button name="delete" 
+                                    onClick={this.handleSubmit} 
+                                    color="danger">
+                                        Delete Task
+                            </Button>
+                    </NavLink>
                 </Container>
             </>
         );
