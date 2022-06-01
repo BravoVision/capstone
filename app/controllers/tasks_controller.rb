@@ -1,8 +1,7 @@
 class TasksController < ApplicationController
     
     def index 
-        tasks = Task.all 
-        render json: tasks
+        render json: current_user.tasks
     end
     
     def create
@@ -21,6 +20,17 @@ class TasksController < ApplicationController
             render json: task
         else
             render json: task.errors, status: 422
+        end
+    end
+
+    def destroy
+        task = Task.find(params[:id])
+        tasks = Task.all
+        
+        if task.destroy
+            render json: tasks
+        else
+            render json: tasks.errors
         end
     end
 

@@ -57,6 +57,18 @@ class App extends React.Component {
     .catch(errors => console.log("Task update errors:", errors))
   }
 
+  deleteTask = (id) => {
+    fetch(`/tasks/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .then(() => this.readTask())
+    .catch(errors => console.log("delete errors:", errors))
+  }
+
   render() {
     const {
       logged_in,
@@ -86,7 +98,7 @@ class App extends React.Component {
                 let task = this.state.tasks.find(
                   (taskObject) => taskObject.id === +id
                 );
-                return <TaskShow task={task} />;
+                return <TaskShow task={task} deleteTask={this.deleteTask}/>;
               }}
             />
           )}
