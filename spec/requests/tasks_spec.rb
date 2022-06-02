@@ -57,6 +57,33 @@ RSpec.describe "Tasks", type: :request do
       expect(response_task["details"]).to eq(task_params[:task][:details])
       expect(response_task["user_id"]).to eq(user.id)
     end
+
+    it "doesn't create a task without a title" do
+      task_params ={
+        task: {
+          details: 'do not forget to peel',
+          user_id: user.id
+        }
+      }
+    post '/tasks', params: task_params
+    expect(response).to have_http_status (422)
+    json = JSON.parse(response.body)
+    expect(json['title']).to include "can't be blank"
+    end
+
+    it "doesn't create a task without details" do
+      task_params ={
+        task: {
+          title: 'bananas',
+          user_id: user.id
+        }
+      }
+    post '/tasks', params: task_params
+    expect(response).to have_http_status (422)
+    json = JSON.parse(response.body)
+    expect(json['details']).to include "can't be blank"
+    end
+
   end
 
 
@@ -81,6 +108,33 @@ RSpec.describe "Tasks", type: :request do
       expect(response_task["details"]).to eq(task_params[:task][:details])
       expect(response_task["user_id"]).to eq(user.id)
     end
+
+    it "doesn't update a task without a title" do
+      task_params ={
+        task: {
+          details: 'do not forget to peel',
+          user_id: user.id
+        }
+      }
+    post '/tasks', params: task_params
+    expect(response).to have_http_status (422)
+    json = JSON.parse(response.body)
+    expect(json['title']).to include "can't be blank"
+    end
+
+    it "doesn't update a task without details" do
+      task_params ={
+        task: {
+          title: 'bananas',
+          user_id: user.id
+        }
+      }
+    post '/tasks', params: task_params
+    expect(response).to have_http_status (422)
+    json = JSON.parse(response.body)
+    expect(json['details']).to include "can't be blank"
+    end
+
   end
 
 
@@ -104,6 +158,7 @@ RSpec.describe "Tasks", type: :request do
     destroy_task = Task.find_by(id: task.id)
     expect(destroy_task).to be_nil
     end
+
   end
   
 end
