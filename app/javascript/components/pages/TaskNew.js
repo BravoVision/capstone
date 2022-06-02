@@ -6,6 +6,7 @@ class TaskNew extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      errors:{},
       newTask: {
         title: "",
         details: "",
@@ -22,9 +23,14 @@ class TaskNew extends Component {
   };
 
   handleSubmit = () => {
-    this.props.createTask(this.state.newTask);
-    this.setState({ submitted: true });
-    console.log(this.state.newTask);
+    this.props.createTask(this.state.newTask)
+        .then((results) => {
+          if (results.task){
+           this.setState({ submitted: true }) 
+          } else {
+           this.setState({errors: results.errors}) 
+          }     
+        })
   };
 
   render() {
@@ -36,6 +42,7 @@ class TaskNew extends Component {
             <FormGroup>
               <Label for="name">Title</Label>
               <Input type="text" name="title" onChange={this.handleInput} />
+              {this.state.errors.title && <div>{this.state.errors.title[0]}</div>}
             </FormGroup>
             <FormGroup>
               <Label for="age">Details</Label>
@@ -44,6 +51,7 @@ class TaskNew extends Component {
                 name="details"
                 onChange={this.handleInput}
               />
+              {this.state.errors.details && <div>{this.state.errors.details[0]}</div>}
             </FormGroup>
           </Form>
           <Button onClick={this.handleSubmit} name="submit">

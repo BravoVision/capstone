@@ -15,14 +15,14 @@ RSpec.describe "Tasks", type: :request do
     user.tasks.create(
     title: 'Fangs',
     details: 'Remember to pick up gold grill from the jeweler',
-  )
+    )
   end 
 
   let!(:other_task)do 
     other_user.tasks.create(
     title: 'Costume Shopping',
     details: 'Remember to pick up the bunny suit from Hot Topic',
-  )
+    )
   end 
   
   
@@ -40,7 +40,6 @@ RSpec.describe "Tasks", type: :request do
   describe "POST /create" do
     
     it 'creates a task' do
-      
       task_params ={
         task: {
           title: 'bananas',
@@ -51,6 +50,7 @@ RSpec.describe "Tasks", type: :request do
 
       post "/tasks", params:task_params
       response_task = JSON.parse(response.body)
+      p response_task
 
       expect(response).to have_http_status(200)
       expect(response_task["title"]).to eq(task_params[:task][:title])
@@ -65,10 +65,11 @@ RSpec.describe "Tasks", type: :request do
           user_id: user.id
         }
       }
-    post '/tasks', params: task_params
-    expect(response).to have_http_status (422)
-    json = JSON.parse(response.body)
-    expect(json['title']).to include "can't be blank"
+
+      post '/tasks', params: task_params
+      expect(response).to have_http_status (422)
+      json = JSON.parse(response.body)
+      expect(json['title']).to include "can't be blank"
     end
 
     it "doesn't create a task without details" do
@@ -78,10 +79,11 @@ RSpec.describe "Tasks", type: :request do
           user_id: user.id
         }
       }
-    post '/tasks', params: task_params
-    expect(response).to have_http_status (422)
-    json = JSON.parse(response.body)
-    expect(json['details']).to include "can't be blank"
+
+      post '/tasks', params: task_params
+      expect(response).to have_http_status (422)
+      json = JSON.parse(response.body)
+      expect(json['details']).to include "can't be blank"
     end
 
   end
@@ -116,10 +118,11 @@ RSpec.describe "Tasks", type: :request do
           user_id: user.id
         }
       }
-    post '/tasks', params: task_params
-    expect(response).to have_http_status (422)
-    json = JSON.parse(response.body)
-    expect(json['title']).to include "can't be blank"
+      
+      patch "/tasks/#{task.id}", params:task_params
+      expect(response).to have_http_status (422)
+      json = JSON.parse(response.body)
+      expect(json['title']).to include "can't be blank"
     end
 
     it "doesn't update a task without details" do
@@ -129,10 +132,10 @@ RSpec.describe "Tasks", type: :request do
           user_id: user.id
         }
       }
-    post '/tasks', params: task_params
-    expect(response).to have_http_status (422)
-    json = JSON.parse(response.body)
-    expect(json['details']).to include "can't be blank"
+      patch "/tasks/#{task.id}", params:task_params
+      expect(response).to have_http_status (422)
+      json = JSON.parse(response.body)
+      expect(json['details']).to include "can't be blank"
     end
 
   end
@@ -151,12 +154,12 @@ RSpec.describe "Tasks", type: :request do
       }
 
 
-    post "/tasks", params:task_params
-    response_task = JSON.parse(response.body)
+      post "/tasks", params:task_params
+      response_task = JSON.parse(response.body)
 
-    delete "/tasks/#{task.id}", params: task_params
-    destroy_task = Task.find_by(id: task.id)
-    expect(destroy_task).to be_nil
+      delete "/tasks/#{task.id}", params: task_params
+      destroy_task = Task.find_by(id: task.id)
+      expect(destroy_task).to be_nil
     end
 
   end

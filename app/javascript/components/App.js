@@ -31,29 +31,32 @@ class App extends React.Component {
   }
 
   createTask = (newlyCreatedTask) => {
-    console.log(newlyCreatedTask);
-    fetch("/tasks", {
+    return fetch("/tasks", {
       body: JSON.stringify(newlyCreatedTask),
       headers: {
         "Content-Type": "application/json",
       },
       method: "POST",
     })
-      .then((response) => response.json())
-      .then(() => this.readTask())
-      .catch((errors) => console.log("Task create errors:", errors));
+      .then((response) => {
+        this.readTask()
+        return response.json()
+      })
+      .catch((errors) => errors);
   }
   
   updateTask = (newlyUpdatedTask, id) => {
-    fetch(`/tasks/${id}`, {
+    return fetch(`/tasks/${id}`, {
       body: JSON.stringify(newlyUpdatedTask),
       headers: {
         "Content-Type": "application/json"
       },
       method: "PATCH"
     })
-    .then(response => response.json())
-    .then(() => this.readTask())
+    .then(response => {
+      this.readTask()
+      return response.json()
+    })
     .catch(errors => console.log("Task update errors:", errors))
   }
 

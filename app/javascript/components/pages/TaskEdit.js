@@ -7,6 +7,7 @@ class TaskEdit extends Component {
     constructor(props) {
         super(props);
         this.state = {
+          errors:{},
           updateTask: {
             title: "",
             details: "",
@@ -23,9 +24,16 @@ class TaskEdit extends Component {
       };
     
       handleSubmit = () => {
-        this.props.updateTask(this.state.updateTask, this.props.task.id);
-        this.setState({ submitted: true });
+        this.props.updateTask(this.state.updateTask, this.props.task.id)
+            .then((results) => {
+              if (results.task){
+                this.setState({ submitted: true }) 
+              } else {
+               this.setState({errors: results.errors}) 
+              }
+              })
       };
+
     
       render() {
         return (
@@ -36,6 +44,7 @@ class TaskEdit extends Component {
                 <FormGroup>
                   <Label for="name">Title</Label>
                   <Input type="text" name="title" onChange={this.handleInput} />
+                  {this.state.errors.title && <div>{this.state.errors.title[0]}</div>}
                 </FormGroup>
                 <FormGroup>
                   <Label for="age">Details</Label>
@@ -44,6 +53,7 @@ class TaskEdit extends Component {
                     name="details"
                     onChange={this.handleInput}
                   />
+                 {this.state.errors.details && <div>{this.state.errors.details[0]}</div>}
                 </FormGroup>
               </Form>
               <Button onClick={this.handleSubmit} name="submit">
