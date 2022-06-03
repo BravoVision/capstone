@@ -16,14 +16,17 @@ class Home extends Component {
       <>
         <Container className="homeContainer">
           <Row>
-            <Col md="6">
+            <Col md="5">
               <h1 id="eventuallyHeader">Eventually... </h1>
-              {/* <img src={logo} alt="Eventually" /> */}
+              <br />
+              <br />
 
+<div className="homeText">
               <h3>Your personal online to-do list.</h3>
               <h4>
                 A Place to keep track of life, and handle things... eventually.
               </h4>
+              </div>
 
               <br />
 
@@ -42,7 +45,7 @@ class Home extends Component {
               </div>
             </Col>
 
-            <Col md="6">
+            <Col md="7">
               <img src={phone_image} id="home-phone" alt="Phone on Desk" />
             </Col>
           </Row>

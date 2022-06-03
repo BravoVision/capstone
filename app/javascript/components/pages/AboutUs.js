@@ -9,9 +9,10 @@ class AboutUs extends Component {
                 <Container className= "aboutUs">
                     
                     <h1>About Eventually...</h1>
+                    <br />
                     <h3>Why do today what you can put off until tomorrow?</h3>
                         
-                    <p> Navigate over to “Eventually” and take a look at your new favorite web application that helps with creating a simple to-do list for your everyday needs. No need to feel overwhelmed about remembering to do research for that 12-page paper due in 2 days, and no more forgetting to feed the dog (maybe?!). 
+                    <p className="aboutPara"> Navigate over to “Eventually” and take a look at your new favorite web application that helps with creating a simple to-do list for your everyday needs. No need to feel overwhelmed about remembering to do research for that 12-page paper due in 2 days, and no more forgetting to feed the dog (maybe?!). 
                     <br />
                     <br />
                     Sign up for “Eventually”, add your tasks, update them as needed, check them off or delete them when you’re done… done being bothered with doing the things.Come to the place that helps you keep track of life and handle things, eventually…
@@ -19,8 +20,8 @@ class AboutUs extends Component {
 
                 </Container>
 
-                <Container>
-                    <h1>About the Eventually team...</h1>
+                <Container className= "aboutTeam">
+                    <h1>Meet the Team</h1>
                     <br />
                     <CardGroup>
 
@@ -46,9 +47,11 @@ class AboutUs extends Component {
                                 <CardText>
                                     Grill master and a real good dude.                                
                                 </CardText>
+                                <a href="https://www.linkedin.com/in/gregory-a-shepherd/">
                                 <Button>
                                     LinkedIn
                                 </Button>
+                                </a>
                             </CardBody>
                         </Card>
                         </Col>
@@ -75,9 +78,11 @@ class AboutUs extends Component {
                                 <CardText>
                                     Skin care expert and better than you at learning code.
                                 </CardText>
+                                <a href="https://www.linkedin.com/in/tameka-stevenson/">
                                 <Button>
                                     LinkedIn
                                 </Button>
+                                </a>
                             </CardBody>
                         </Card>
                         </Col>
@@ -104,9 +109,11 @@ class AboutUs extends Component {
                                 <CardText>
                                     Photographer and film lover. 
                                 </CardText>
+                                <a href="https://www.linkedin.com/in/nat-diaz/">
                                 <Button>
                                     LinkedIn
                                 </Button>
+                                </a>
                             </CardBody>
                         </Card>
                         </Col>
@@ -133,9 +140,11 @@ class AboutUs extends Component {
                                 <CardText>
                                     Canva Pro pro and music producer guy.
                                 </CardText>
+                                <a href="https://www.linkedin.com/in/zprunella/">
                                 <Button>
                                     LinkedIn
                                 </Button>
+                                </a>
                             </CardBody>
                         </Card>
                         </Col>

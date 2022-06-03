@@ -25,19 +25,22 @@ a {
     width: 6rem;
 }
 
+
 //  Footer Styling
 
 .footer {
     background-color: #070F35;
+    margin-top: 3rem;
     padding-top: 5px;
     padding-bottom: 2px;
 }
 
 #footerText {
     text-align: center;
-    color: white;
+    color: darkgray;
     font-size: medium;
 }
+
 
 
 //  Home Page Styling
@@ -51,15 +54,16 @@ a {
     border-radius: 25px;
     top: 50%;
     width: 100%;
-    text-align: center;
-    font-size: 18px;
+    margin-left: 2rem;
+    box-shadow: 0px 0px 25px lightblue;
 }
 
 #eventuallyHeader {
     background-image: linear-gradient (45deg, #ffff00, #fc6b03);
-    background-color: yellow;
+    // background-color: yellow;
     font-size: 4rem;
     text-shadow: white 2px;
+    text-align: center;
     // background-size: 100%;
     // background-repeat: repeat;
     // -webkit-background-clip: text;
@@ -68,10 +72,16 @@ a {
     // -moz-text-fill-color: transparent;
 }
 
-// .btnDiv {
-//     margin: 0 auto;
-//     display: inline-block;
-// }
+.homeText {
+    text-align: center;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
 
 .button {
     display: inline-block;
@@ -85,11 +95,25 @@ a {
 
 .aboutUs {
     text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.aboutPara {
+    background: #48577a;
+    backdrop-filter: blur(10px);
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.aboutTeam {
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .indexCard {
     margin: 10px;
-    // max-width: 15rem;
+    height: 30rem;
 }
 
 .bioImage {
