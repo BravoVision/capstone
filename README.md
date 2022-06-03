@@ -50,21 +50,14 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 ## Tech Stack
 
-- Wire Frame
-<img src="https://www.svgrepo.com/show/305835/canva.svg">
-
-- Front & Backend
-<img src="https://www.svgrepo.com/show/354259/react.svg">
-<img src="https://www.svgrepo.com/show/354252/rails.svg">
-<img src="https://raw.github.com/plataformatec/devise/master/devise.png">
-
-
-- Database Querying
-<img src="https://www.svgrepo.com/show/354202/postman-icon.svg">
-
-- Application Launch
-<img src="https://www.svgrepo.com/show/349404/heroku.svg">
-
+<p float="left">
+<img src="https://www.svgrepo.com/show/305835/canva.svg" alt="Canva logo" width="100px">
+<img src="https://www.svgrepo.com/show/354259/react.svg" alt="React logo" width="100px">
+<img src="https://www.svgrepo.com/show/354252/rails.svg" alt="Rails logo" width="100px">
+<img src="https://raw.github.com/plataformatec/devise/master/devise.png" alt="Devise logo" width="100px">
+<img src="https://www.svgrepo.com/show/354202/postman-icon.svg" alt="PostMan" width="100px"> 
+<img src="https://www.svgrepo.com/show/349404/heroku.svg" alt="Heroku" width="100px">
+</p>
 
 
 ## Unauthorized User Experience
