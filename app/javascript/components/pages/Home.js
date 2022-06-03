@@ -17,7 +17,7 @@ class Home extends Component {
             <>
                 <Container>
                     <Row>
-                        <Col md="8">
+                        <Col md="6">
 
                             
                                 <img src={logo} alt="Eventually" />
@@ -41,7 +41,7 @@ class Home extends Component {
                             </a>
                         </Col>
 
-                        <Col md="8">
+                        <Col md="6">
                             <img src={phone_image} id="home-phone" alt="Phone on Desk" />
                         </Col>
                     </Row>

@@ -1,24 +1,44 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- @import 'bootstrap';
+@import 'bootstrap';
+
+// App Styling 
+
+.appBody {
+    background-color: #070F35;
+}
+
+h3, h4, p {
+    color: aliceblue;
+}
+
+//  Header Styling
+
+.header {
+    background-image: linear-gradient( to right, #fa4dc8, #fc6b03, #ffd230, #f9e830);
+}
+
+//  Footer Styling
+
+.footer {
+    background-color: #070F35;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+
+#footerText {
+    text-align: center;
+    color: white;
+    font-size: medium;
+}
 
 
 //  Home Page Styling
 
 #home-phone {
-    width: 600px;
+    width: 450px;
     border-radius: 25px;
+    // text-align: center;
+    // display: block;
+    // justify-content: center;
+    // align-items: center;
+    // margin: auto;
 }

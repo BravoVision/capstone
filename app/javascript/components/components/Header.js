@@ -23,8 +23,9 @@ class Header extends Component {
 
     return (
       <>
-        <Container>
-          <Navbar color="light" expand="md" light>
+        {/* <Container> */}
+        <div class="header">
+          <Navbar expand="md">
             <NavLink to={homeLink} >Eventually...</NavLink>
             <Nav className="me-auto" navbar>
               <NavItem>
@@ -46,7 +47,8 @@ class Header extends Component {
               )}
             </Nav>
           </Navbar>
-        </Container>
+          </div>
+        {/* </Container> */}
       </>
     );
   }

@@ -6,13 +6,13 @@ class Footer extends Component {
     render() {
         return (
             <>
-            <Container>
-                <h1>&copy;Eventually... Brought to you by 
-                    <a href="https://github.com/BravoVision"> BravoVision</a>
-                </h1>  
-
-                
-            </Container> 
+            {/* <Container> */}
+                <div class="footer">
+                <p id="footerText">&copy; Eventually... Brought to you by 
+                    <a href="https://github.com/BravoVision"> BravoVision 2022</a>
+                </p> 
+                </div>  
+            {/* </Container>  */}
             </>
         );
     }
