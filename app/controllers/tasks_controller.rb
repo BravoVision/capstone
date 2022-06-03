@@ -7,9 +7,9 @@ class TasksController < ApplicationController
     def create
         task = Task.create(task_params)
         if task.valid?
-            render json: task
+            render json: {task: task}
         else
-            render json: task.errors, status: 422
+            render json: {errors: task.errors}, status: 422
         end
     end
 
@@ -18,9 +18,9 @@ class TasksController < ApplicationController
         task.update(task_params)
 
         if task.valid?
-            render json: task
+            render json: {task: task}
         else
-            render json: task.errors, status: 422
+            render json: {errors: task.errors}, status: 422
         end
     end
 

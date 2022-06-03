@@ -15,14 +15,14 @@ RSpec.describe "Tasks", type: :request do
     user.tasks.create(
     title: 'Fangs',
     details: 'Remember to pick up gold grill from the jeweler',
-  )
+    )
   end 
 
   let!(:other_task)do 
     other_user.tasks.create(
     title: 'Costume Shopping',
     details: 'Remember to pick up the bunny suit from Hot Topic',
-  )
+    )
   end 
   
   
@@ -35,75 +35,4 @@ RSpec.describe "Tasks", type: :request do
       expect(response_task.length).to eq(1)
     end
   end
-
-
-  describe "POST /create" do
-    
-    it 'creates a task' do
-      
-      task_params ={
-        task: {
-          title: 'bananas',
-          details: 'do not forget to peel',
-          user_id: user.id
-        }
-      }
-
-      post "/tasks", params:task_params
-      response_task = JSON.parse(response.body)
-
-      expect(response).to have_http_status(200)
-      expect(response_task["title"]).to eq(task_params[:task][:title])
-      expect(response_task["details"]).to eq(task_params[:task][:details])
-      expect(response_task["user_id"]).to eq(user.id)
-    end
-  end
-
-
-  describe "PATCH /update" do
-    
-    it 'updates a task' do
-      
-      task_params ={
-        task: {
-          title: 'bananas',
-          details: 'do not forget to peel',
-          user_id: user.id
-        }
-      }
-
-      patch "/tasks/#{task.id}", params:task_params
-      task = Task.first
-      response_task = JSON.parse(response.body)
-
-      expect(response).to have_http_status(200)
-      expect(response_task["title"]).to eq(task_params[:task][:title])
-      expect(response_task["details"]).to eq(task_params[:task][:details])
-      expect(response_task["user_id"]).to eq(user.id)
-    end
-  end
-
-
-  describe "DELETE /destroy" do
-    
-    it 'can delete a task' do
-      
-      task_params ={
-        task: {
-          title: 'bananas',
-          details: 'do not forget to peel',
-          user_id: user.id
-        }
-      }
-
-
-    post "/tasks", params:task_params
-    response_task = JSON.parse(response.body)
-
-    delete "/tasks/#{task.id}", params: task_params
-    destroy_task = Task.find_by(id: task.id)
-    expect(destroy_task).to be_nil
-    end
-  end
-  
 end
