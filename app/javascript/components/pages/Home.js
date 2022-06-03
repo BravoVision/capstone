@@ -15,12 +15,12 @@ class Home extends Component {
         } = this.props
         return (
             <>
-                <Container>
+                <Container className="homeContainer">
                     <Row>
                         <Col md="6">
 
-                            
-                                <img src={logo} alt="Eventually" />
+                            <h1 id="eventuallyHeader">Eventually... </h1>
+                                {/* <img src={logo} alt="Eventually" /> */}
                             
 
                             <h3>Your personal online to-do list.</h3>
@@ -28,17 +28,20 @@ class Home extends Component {
 
                             <br />
 
-                            <a href={sign_in_route} className="nav-link">
-                                <Button color="primary">
+<div class="btnDiv">
+                            <a href={sign_in_route}>
+                                <Button color="primary" class="button">
                                     Sign In
                                 </Button>
                             </a>
 
-                            <a href={new_user_route} className="nav-link">
-                                <Button color="primary">
+                            <a href={new_user_route}>
+                                <Button color="primary" class="button">
                                     Sign Up
                                 </Button>
                             </a>
+
+                    </div>
                         </Col>
 
                         <Col md="6">

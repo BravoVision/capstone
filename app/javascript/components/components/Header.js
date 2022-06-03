@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-import home_image from "../assets/home.png"
+import eyeLogo from "../assets/eyeLogo.svg";
 import { NavLink } from "react-router-dom";
-import {
-  Container,
-  Nav,
-  Navbar,
-  NavbarBrand,
-  NavItem,
-} from "reactstrap";
+import { Col, Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
 
 class Header extends Component {
   render() {
@@ -23,20 +17,22 @@ class Header extends Component {
 
     return (
       <>
-        {/* <Container> */}
         <div class="header">
           <Navbar expand="md">
-            <NavLink to={homeLink} >Eventually...</NavLink>
-            <Nav className="me-auto" navbar>
-              <NavItem>
-                <NavLink to="/about_us">ABOUT US</NavLink>
-              </NavItem>
+            <Col>
+              {/* <NavLink to={homeLink} >Eventually...</NavLink> */}
 
-              <NavItem>
-                <NavLink to={homeLink}>
-                  <img src={home_image} alt="home link" />
-                </NavLink>
-              </NavItem>
+              <NavLink to={homeLink}>
+                <img id="eyeLogo" src={eyeLogo} alt="home link" />
+              </NavLink>
+            </Col>
+
+            <Nav className="me-auto" navbar>
+              <Col>
+                {/* <NavItem> */}
+                <NavLink to="/about_us">ABOUT US</NavLink>
+                {/* </NavItem> */}
+              </Col>
 
               {logged_in && (
                 <NavItem>
@@ -47,8 +43,7 @@ class Header extends Component {
               )}
             </Nav>
           </Navbar>
-          </div>
-        {/* </Container> */}
+        </div>
       </>
     );
   }

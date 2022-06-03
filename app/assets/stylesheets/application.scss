@@ -6,7 +6,7 @@
     background-color: #070F35;
 }
 
-h3, h4, p {
+h1, h3, h4, p {
     color: aliceblue;
 }
 
@@ -14,6 +14,10 @@ h3, h4, p {
 
 .header {
     background-image: linear-gradient( to right, #fa4dc8, #fc6b03, #ffd230, #f9e830);
+}
+
+#eyeLogo {
+    width: 6rem;
 }
 
 //  Footer Styling
@@ -33,12 +37,40 @@ h3, h4, p {
 
 //  Home Page Styling
 
-#home-phone {
-    width: 450px;
-    border-radius: 25px;
-    // text-align: center;
-    // display: block;
-    // justify-content: center;
-    // align-items: center;
-    // margin: auto;
+.homeContainer {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
+
+#home-phone {
+    border-radius: 25px;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+#eventuallyHeader {
+    background-image: linear-gradient (45deg, #ffff00, #fc6b03);
+    background-color: yellow;
+    font-size: 80px;
+    text-shadow: white 2px;
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+// .btnDiv {
+//     margin: 0 auto;
+//     display: inline-block;
+// }
+
+.button {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+}
+
