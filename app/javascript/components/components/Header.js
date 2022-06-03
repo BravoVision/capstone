@@ -17,14 +17,14 @@ class Header extends Component {
 
     return (
       <>
-        <div class="header">
+        <div className="header">
           <Navbar expand="md">
             <Col>
-              {/* <NavLink to={homeLink} >Eventually...</NavLink> */}
 
               <NavLink to={homeLink}>
                 <img id="eyeLogo" src={eyeLogo} alt="home link" />
               </NavLink>
+              
             </Col>
 
             <Nav className="me-auto" navbar>

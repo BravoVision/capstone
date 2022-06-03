@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { Container, CardGroup, Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, CardText } from 'reactstrap'
+import { Container, Col, CardGroup, Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, CardText } from 'reactstrap'
 
 class AboutUs extends Component {
 
     render() {
         return (
             <>
-                <Container>
-
+                <Container className= "aboutUs">
+                    
                     <h1>About Eventually...</h1>
                     <h3>Why do today what you can put off until tomorrow?</h3>
                         
@@ -23,8 +23,11 @@ class AboutUs extends Component {
                     <h1>About the Eventually team...</h1>
                     <br />
                     <CardGroup>
-                        <Card>
+
+                    <Col sm="8" md="6" lg="6" xl="3">
+                        <Card className="indexCard">
                             <CardImg
+                                className="bioImage"
                                 alt="Card image cap"
                                 src="https://www.looper.com/img/gallery/the-offices-michael-scott-was-almost-a-murderer/intro-1591207215.jpg"
                                 top
@@ -48,8 +51,12 @@ class AboutUs extends Component {
                                 </Button>
                             </CardBody>
                         </Card>
-                        <Card>
+                        </Col>
+
+                        <Col sm="8" md="6" lg="6" xl="3">
+                        <Card className="indexCard">
                             <CardImg
+                                className="bioImage"
                                 alt="Card image cap"
                                 src="https://pbs.twimg.com/media/ELJA86iU0AAQ6HD.jpg"
                                 top
@@ -73,8 +80,12 @@ class AboutUs extends Component {
                                 </Button>
                             </CardBody>
                         </Card>
-                        <Card>
+                        </Col>
+
+                        <Col sm="8" md="6" lg="6" xl="3">
+                        <Card className="indexCard">
                             <CardImg
+                                className="bioImage"
                                 alt="Card image cap"
                                 src="https://images.squarespace-cdn.com/content/v1/59da5d13cf81e005db71d925/1513171418491-XQGKXDDIZ8JDUWK33RJC/dwight.jpg?format=1500w"
                                 top
@@ -98,8 +109,12 @@ class AboutUs extends Component {
                                 </Button>
                             </CardBody>
                         </Card>
-                        <Card>
+                        </Col>
+
+                        <Col sm="8" md="6" lg="6" xl="3">
+                        <Card className="indexCard">
                             <CardImg
+                                className="bioImage"
                                 alt="Card image cap"
                                 src="https://www.looper.com/img/gallery/the-best-time-creed-bratton-ever-broke-character-on-the-office/intro-1620093454.jpg"
                                 top
@@ -123,6 +138,8 @@ class AboutUs extends Component {
                                 </Button>
                             </CardBody>
                         </Card>
+                        </Col>
+
                     </CardGroup>
                 </Container>
             </>
