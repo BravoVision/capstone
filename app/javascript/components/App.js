@@ -82,6 +82,7 @@ class App extends React.Component {
     } = this.props;
     return (
       <Router>
+        <div className="appBody">
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" render={(props) => <Home {...this.props} />} />
@@ -144,6 +145,8 @@ class App extends React.Component {
           />
         </Switch>
         <Footer {...this.props} />
+        </div>
+
       </Router>
     );
   }
