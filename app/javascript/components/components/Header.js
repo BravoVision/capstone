@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import eyeLogo from "../assets/eyeLogo.svg";
 import { NavLink } from "react-router-dom";
-import { Col, Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
+import { Col, Nav, Navbar, NavbarBrand, NavItem, Row } from "reactstrap";
 
 class Header extends Component {
   render() {
@@ -19,6 +19,7 @@ class Header extends Component {
       <>
         <div className="header">
           <Navbar expand="md">
+        
             <Col>
 
               <NavLink to={homeLink}>
@@ -27,21 +28,26 @@ class Header extends Component {
               
             </Col>
 
+           
             <Nav className="me-auto" navbar>
-              <Col>
-                {/* <NavItem> */}
+    <div className="headerLinks">
+            <NavItem>
                 <NavLink to="/about_us">ABOUT US</NavLink>
-                {/* </NavItem> */}
-              </Col>
+                </NavItem>
 
+{' '}
               {logged_in && (
+          
                 <NavItem>
                   <a href={sign_out_route} className="nav-link">
-                    Sign Out
+                    SIGN OUT
                   </a>
                 </NavItem>
+           
               )}
+              </div>  
             </Nav>
+      
           </Navbar>
         </div>
       </>

@@ -6,7 +6,7 @@
     background-color: #070F35;
 }
 
-h1, h3, h4, p {
+h1, h2, h3, h4, p {
     color: aliceblue;
 }
 
@@ -14,6 +14,8 @@ a {
     text-decoration: none;
     font-weight: bold;
 }
+
+
 
 //  Header Styling
 
@@ -24,6 +26,12 @@ a {
 #eyeLogo {
     width: 6rem;
 }
+
+.headerLinks {
+    font-size: 1rem;
+    display: inline-block;
+}
+
 
 
 //  Footer Styling
@@ -59,17 +67,10 @@ a {
 }
 
 #eventuallyHeader {
-    background-image: linear-gradient (45deg, #ffff00, #fc6b03);
-    // background-color: yellow;
+    color: #ffd230;
     font-size: 4rem;
     text-shadow: white 2px;
     text-align: center;
-    // background-size: 100%;
-    // background-repeat: repeat;
-    // -webkit-background-clip: text;
-    // -moz-background-clip: text;
-    // -webkit-text-fill-color: transparent; 
-    // -moz-text-fill-color: transparent;
 }
 
 .homeText {
@@ -86,8 +87,11 @@ a {
 .button {
     display: inline-block;
     text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
     margin: 0.5rem;
-    width: 6rem;
+    width: 8rem;
+    background-image: linear-gradient( to right, #fa4dc8, #fc6b03);
 }
 
 
@@ -117,6 +121,111 @@ a {
 }
 
 .bioImage {
-    height: 15rem;
+    height: 14rem;
     object-fit: cover;
 }
+
+.cardText {
+    color: black;
+}
+
+
+.linkedInButton {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    margin: 0.5rem;
+    width: 8rem;
+    background-image: linear-gradient( to right, #fa4dc8, #fc6b03);
+}
+
+
+
+// Not Found Styling 
+
+.notFoundText {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
+
+.notFoundText{
+    animation: glitch 1s linear infinite;
+  }
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+
+  .notFoundText:before,
+  .notFoundText:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+
+  .notFoundText:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+
+  .notFoundText:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+
+
+div.eyes {
+    width: 800px;
+    height: 200px;
+    // background-color: red;
+    position: relative;
+    animation: myfirst 5s linear 2s infinite alternate;
+  }
+
+  @keyframes myfirst {
+    0%   {left:13rem; width:20rem;}
+    25%  {left:50rem; width:20rem;}
+    50%  {left:40rem; width:20rem;}
+    75%  {left:25rem; width:10rem;}
+    100% {left:13rem; width:20rem;}
+  }

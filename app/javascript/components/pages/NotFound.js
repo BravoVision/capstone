@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Container } from 'reactstrap'
-import  NotFoundImg  from '../assets/Eventually.jpg'
+import  eyeLogo  from '../assets/eyeLogo.svg'
+import  notFound  from '../assets/404.svg'
 
 class NotFound extends Component {
 
@@ -15,9 +16,13 @@ class NotFound extends Component {
         return (
             <>
             <Container>
-                <img src={NotFoundImg} alt="404 Not Found" width="50%"/>
-                <h1>404</h1>
-                <h2>NotFound</h2>
+                <img className="notFoundText" src={notFound} alt="404 Not Found" />
+                <br />
+                <br />
+                <div className="eyes">
+                <img src={eyeLogo} alt="404 Not Found" width="50%"/>
+                <img src={eyeLogo} alt="404 Not Found" width="50%"/>
+                </div>
             </Container>    
             </>
         );
