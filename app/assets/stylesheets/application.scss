@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+body {
+  background-size: cover;
+  background-color: #070f35;
+}
+
 // App Styling
 
 .appBody {
@@ -9,7 +14,6 @@
 h1,
 h2,
 h3,
-h4,
 p {
   color: aliceblue;
 }
@@ -18,6 +22,32 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
+
+// Devise Styling 
+
+.deviseBackground {
+  background-color: #070f35;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  color: white;
+}
+
+.deviseHeader {
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.field {
+  color: white;
+}
+
+
 
 //  Header Styling
 
@@ -44,7 +74,11 @@ a {
 
 .footer {
   background-color: #070f35;
-  margin-top: 3rem;
+  position: fixed;
+  bottom: 0;
+  margin-left: 33%;
+  margin-right: 33%;
+  // margin-top: 5rem;
   padding-top: 5px;
   padding-bottom: 2px;
 }
@@ -251,6 +285,8 @@ div.eyes {
 .showCard {
   background-color: white;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 3rem;
   max-width: 30rem;
   box-shadow: 0px 0px 20px lightblue;
@@ -322,4 +358,28 @@ div.eyes {
 
 .errorDisplay {
   color: #fc6b03;
+}
+
+// Task Index Styling 
+
+.task-index {
+  // align-items: center;
+  // margin-left: auto;
+  // margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.taskTitle {
+  text-align: center;
+}
+
+.createButton {
+display: flex;
+justify-content: center;
+}
+
+.listTitle {
+  color: #070f35; 
 }

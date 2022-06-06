@@ -61,9 +61,6 @@ class TaskNew extends Component {
             Submit New Task
           </Button>   
           </Form>
- 
-       
-  
           </Col>
         </Container>
         </div>

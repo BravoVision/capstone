@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Container, Col, Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { Redirect } from "react-router-dom";
 
 
@@ -38,28 +38,33 @@ class TaskEdit extends Component {
       render() {
         return (
           <>
-            <Container>
-              <h1>Task Update</h1>
+          <div>
+            <Container className="center-form">
+              <Col xs="8" sm="8" md="6" lg="6" xl="6">
+              <h1>Enter 'Update Task' info</h1>
+              <br />
               <Form>
                 <FormGroup>
-                  <Label for="name">Title</Label>
+                  <Label for="title" className="formLabel">Title</Label>
                   <Input type="text" name="title" onChange={this.handleInput} />
-                  {this.state.errors.title && <div>{this.state.errors.title[0]}</div>}
+                  {this.state.errors.title && <div className="errorDisplay">{this.state.errors.title[0]}</div>}
                 </FormGroup>
                 <FormGroup>
-                  <Label for="age">Details</Label>
+                  <Label for="details" className="formLabel">Details</Label>
                   <Input
                     type="textarea"
                     name="details"
                     onChange={this.handleInput}
                   />
-                 {this.state.errors.details && <div>{this.state.errors.details[0]}</div>}
+                 {this.state.errors.details && <div className="errorDisplay">{this.state.errors.details[0]}</div>}
                 </FormGroup>
-              </Form>
-              <Button onClick={this.handleSubmit} name="submit">
-                Submit Task Updates
+                <Button onClick={this.handleSubmit} className="button submitButton" >
+                Submit Update
               </Button>
+              </Form>
+              </Col>
             </Container>
+            </div>
             {this.state.submitted && <Redirect to={`/task_show/${this.props.task.id}`}/>}
           </>
         );

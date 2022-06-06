@@ -6,22 +6,25 @@ class TaskIndex extends Component {
   render() {
     return (
       <>
-        <Container>
-          <h1>Task Index</h1>
+        <Container className="text-center">
+          <br />
+          <br />
+          <h1 className="taskTitle">Your Personal Task List</h1>
+          <br />
           <br />
           <NavLink to="/task_new">
-            <Button color="primary">Create New Task</Button>
+            <Button className="button createButton">Add Task</Button>
           </NavLink>
           <br />
-
+          <div className="task-index">
           {this.props.tasks?.map((task) => {
             return (
               <Row key={task.id}>
-                <Col md="6">
+                <Col xs="8" sm="8" md="6" lg="6" xl="6">
                   <Card body>
                     <CardTitle>
                       <NavLink to={`/task_show/${task.id}`}>
-                        <h4>{task.title}</h4>
+                        <h4 className="listTitle">{task.title}</h4>
                       </NavLink>
                     </CardTitle>
                   </Card>
@@ -29,6 +32,7 @@ class TaskIndex extends Component {
               </Row>
             );
           })}
+           </div>
         </Container>
       </>
     );
