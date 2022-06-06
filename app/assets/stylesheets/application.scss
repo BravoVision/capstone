@@ -245,3 +245,81 @@ div.eyes {
     width: 20rem;
   }
 }
+
+// Task Show Styling
+
+.showCard {
+  background-color: white;
+  align-items: center;
+  margin-top: 3rem;
+  max-width: 30rem;
+  box-shadow: 0px 0px 20px lightblue;
+}
+
+.showTitle {
+  color: black;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.showDetails {
+  color: black;
+  text-align: center;
+  align-items: center;
+}
+
+.showFooter {
+  align-items: center;
+  background-color: white;
+}
+
+.goBackButton {
+  color: black;
+  background-color: #fa4dc8;
+}
+
+.updateButton {
+  color: black;
+  background-color: #fc6b03;
+}
+
+.deleteButton {
+  color: black;
+  background-color: #ffd230;
+}
+
+// Task New Styling
+
+.center-form {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.submitButton {
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 10rem;
+}
+
+.newHeader {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.formLabel {
+  color: white;
+  font-weight: lighter;
+  font-size: 1.25rem;
+}
+
+.errorDisplay {
+  color: #fc6b03;
+}
