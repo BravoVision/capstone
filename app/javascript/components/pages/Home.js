@@ -21,11 +21,12 @@ class Home extends Component {
               <br />
               <br />
 
-<div className="homeText">
-              <h3>Your personal online to-do list.</h3>
-              <h4>
-                A Place to keep track of life, and handle things... eventually.
-              </h4>
+              <div className="homeText">
+                <h3>Your personal online to-do list.</h3>
+                <h4>
+                  A Place to keep track of life, and handle things...
+                  eventually.
+                </h4>
               </div>
 
               <br />

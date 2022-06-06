@@ -1,231 +1,247 @@
-@import 'bootstrap';
+@import "bootstrap";
 
-// App Styling 
+// App Styling
 
 .appBody {
-    background-color: #070F35;
+  background-color: #070f35;
 }
 
-h1, h2, h3, h4, p {
-    color: aliceblue;
+h1,
+h2,
+h3,
+h4,
+p {
+  color: aliceblue;
 }
 
 a {
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
 }
-
-
 
 //  Header Styling
 
 .header {
-    background-image: linear-gradient( to right, #fa4dc8, #fc6b03, #ffd230, #f9e830);
+  background-image: linear-gradient(
+    to right,
+    #fa4dc8,
+    #fc6b03,
+    #ffd230,
+    #f9e830
+  );
 }
 
 #eyeLogo {
-    width: 6rem;
+  width: 6rem;
 }
 
 .headerLinks {
-    font-size: 1rem;
-    display: inline-block;
+  font-size: 1rem;
+  display: inline-block;
 }
-
-
 
 //  Footer Styling
 
 .footer {
-    background-color: #070F35;
-    margin-top: 3rem;
-    padding-top: 5px;
-    padding-bottom: 2px;
+  background-color: #070f35;
+  margin-top: 3rem;
+  padding-top: 5px;
+  padding-bottom: 2px;
 }
 
 #footerText {
-    text-align: center;
-    color: darkgray;
-    font-size: medium;
+  text-align: center;
+  color: darkgray;
+  font-size: medium;
 }
-
-
 
 //  Home Page Styling
 
 .homeContainer {
-    margin-top: 100px;
-    margin-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 #home-phone {
-    border-radius: 25px;
-    top: 50%;
-    width: 100%;
-    margin-left: 2rem;
-    box-shadow: 0px 0px 25px lightblue;
+  border-radius: 25px;
+  top: 50%;
+  width: 100%;
+  margin-left: 2rem;
+  box-shadow: 0px 0px 25px lightblue;
 }
 
 #eventuallyHeader {
-    color: #ffd230;
-    font-size: 4rem;
-    text-shadow: white 2px;
-    text-align: center;
+  color: #ffd230;
+  font-size: 4rem;
+  text-shadow: white 2px;
+  text-align: center;
 }
 
 .homeText {
-    text-align: center;
+  text-align: center;
 }
 
 .btnDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 
 .button {
-    display: inline-block;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin: 0.5rem;
-    width: 8rem;
-    background-image: linear-gradient( to right, #fa4dc8, #fc6b03);
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  width: 8rem;
+  background-image: linear-gradient(to right, #fa4dc8, #fc6b03);
 }
-
 
 //  About Us Page Styling
 
 .aboutUs {
-    text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 6rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 
 .aboutPara {
-    background: #48577a;
-    backdrop-filter: blur(10px);
-    margin: 1rem;
-    padding: 2rem;
+  background: #48577a;
+  backdrop-filter: blur(10px);
+  margin: 1rem;
+  padding: 2rem;
 }
 
 .aboutTeam {
-    text-align: center;
-    margin-top: 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .indexCard {
-    margin: 10px;
-    height: 30rem;
+  margin: 10px;
+  height: 30rem;
 }
 
 .bioImage {
-    height: 14rem;
-    object-fit: cover;
+  height: 14rem;
+  object-fit: cover;
 }
 
 .cardText {
-    color: black;
+  color: black;
 }
-
 
 .linkedInButton {
-    display: inline-block;
-    text-align: center;
-    position: relative;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    margin: 0.5rem;
-    width: 8rem;
-    background-image: linear-gradient( to right, #fa4dc8, #fc6b03);
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  margin: 0.5rem;
+  width: 8rem;
+  background-image: linear-gradient(to right, #fa4dc8, #fc6b03);
 }
 
-
-
-// Not Found Styling 
+// Not Found Styling
 
 .notFoundText {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.notFoundText{
-    animation: glitch 1s linear infinite;
+.notFoundText {
+  animation: glitch 1s linear infinite;
+}
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
   }
-  @keyframes glitch{
-    2%,64%{
-      transform: translate(2px,0) skew(0deg);
-    }
-    4%,60%{
-      transform: translate(-2px,0) skew(0deg);
-    }
-    62%{
-      transform: translate(0,0) skew(5deg); 
-    }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
   }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
 
-  .notFoundText:before,
-  .notFoundText:after{
-    content: attr(title);
-    position: absolute;
-    left: 0;
-  }
+.notFoundText:before,
+.notFoundText:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
 
-  .notFoundText:before{
-    animation: glitchTop 1s linear infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  }
+.notFoundText:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
 
-  @keyframes glitchTop{
-    2%,64%{
-      transform: translate(2px,-2px);
-    }
-    4%,60%{
-      transform: translate(-2px,2px);
-    }
-    62%{
-      transform: translate(13px,-1px) skew(-13deg); 
-    }
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
   }
-
-  .notFoundText:after{
-    animation: glitchBotom 1.5s linear infinite;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
   }
-
-  @keyframes glitchBotom{
-    2%,64%{
-      transform: translate(-2px,0);
-    }
-    4%,60%{
-      transform: translate(-2px,0);
-    }
-    62%{
-      transform: translate(-22px,5px) skew(21deg); 
-    }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
   }
+}
 
+.notFoundText:after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
 
 div.eyes {
-    width: 800px;
-    height: 200px;
-    // background-color: red;
-    position: relative;
-    animation: myfirst 5s linear 2s infinite alternate;
-  }
+  width: 800px;
+  height: 200px;
+  position: relative;
+  animation: myfirst 5s linear 2s infinite alternate;
+}
 
-  @keyframes myfirst {
-    0%   {left:13rem; width:20rem;}
-    25%  {left:50rem; width:20rem;}
-    50%  {left:40rem; width:20rem;}
-    75%  {left:25rem; width:10rem;}
-    100% {left:13rem; width:20rem;}
+@keyframes myfirst {
+  0% {
+    left: 13rem;
+    width: 20rem;
   }
+  25% {
+    left: 50rem;
+    width: 20rem;
+  }
+  50% {
+    left: 40rem;
+    width: 20rem;
+  }
+  75% {
+    left: 25rem;
+    width: 10rem;
+  }
+  100% {
+    left: 13rem;
+    width: 20rem;
+  }
+}

@@ -19,35 +19,27 @@ class Header extends Component {
       <>
         <div className="header">
           <Navbar expand="md">
-        
             <Col>
-
               <NavLink to={homeLink}>
                 <img id="eyeLogo" src={eyeLogo} alt="home link" />
               </NavLink>
-              
             </Col>
 
-           
             <Nav className="me-auto" navbar>
-    <div className="headerLinks">
-            <NavItem>
-                <NavLink to="/about_us">ABOUT US</NavLink>
+              <div className="headerLinks">
+                <NavItem>
+                  <NavLink to="/about_us">ABOUT US</NavLink>
                 </NavItem>
 
-{' '}
-              {logged_in && (
-          
-                <NavItem>
-                  <a href={sign_out_route} className="nav-link">
-                    SIGN OUT
-                  </a>
-                </NavItem>
-           
-              )}
-              </div>  
+                {logged_in && (
+                  <NavItem>
+                    <a href={sign_out_route} className="nav-link">
+                      SIGN OUT
+                    </a>
+                  </NavItem>
+                )}
+              </div>
             </Nav>
-      
           </Navbar>
         </div>
       </>

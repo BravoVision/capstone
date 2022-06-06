@@ -10,7 +10,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Container } from "reactstrap"
 
 class App extends React.Component {
   constructor(props) {
@@ -83,7 +82,6 @@ class App extends React.Component {
     } = this.props;
     return (
       <Router>
-        {/* <Container>  */}
         <div className="appBody">
         <Header {...this.props} />
         <Switch>
@@ -148,7 +146,7 @@ class App extends React.Component {
         </Switch>
         <Footer {...this.props} />
         </div>
-        {/* </Container> */}
+
       </Router>
     );
   }
