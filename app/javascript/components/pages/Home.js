@@ -23,25 +23,19 @@ class Home extends Component {
 
               <div className="homeText">
                 <h3>Your personal online to-do list.</h3>
-                <h4>
+                <h4 id="homeSubText">
                   A Place to keep track of life, and handle things...
                   eventually.
                 </h4>
               </div>
-
               <br />
-
               <div className="btnDiv">
                 <a href={sign_in_route}>
-                  <Button color="primary" className="button">
-                    Sign In
-                  </Button>
+                  <Button className="button">Sign In</Button>
                 </a>
 
                 <a href={new_user_route}>
-                  <Button color="primary" className="button">
-                    Sign Up
-                  </Button>
+                  <Button className="button">Sign Up</Button>
                 </a>
               </div>
             </Col>

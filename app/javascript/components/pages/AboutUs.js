@@ -61,7 +61,10 @@ class AboutUs extends Component {
                     Grill master and a real good dude. Lets see if we can get to
                     Super Saiyan Blue!!
                   </CardText>
-                  <a href="https://www.linkedin.com/in/gregory-a-shepherd/">
+                  <a
+                    href="https://www.linkedin.com/in/gregory-a-shepherd/"
+                    target="_blank"
+                  >
                     <Button className="linkedInButton">LinkedIn</Button>
                   </a>
                 </CardBody>
@@ -87,7 +90,10 @@ class AboutUs extends Component {
                     Skin care expert and better than you at learning code. My #1
                     fave read is Vibrational Medicine.
                   </CardText>
-                  <a href="https://www.linkedin.com/in/tameka-stevenson/">
+                  <a
+                    href="https://www.linkedin.com/in/tameka-stevenson/"
+                    target="_blank"
+                  >
                     <Button className="linkedInButton">LinkedIn</Button>
                   </a>
                 </CardBody>
@@ -113,7 +119,10 @@ class AboutUs extends Component {
                     Photographer and film lover. Surrounded by plants, excited
                     about a new leaf coming in.
                   </CardText>
-                  <a href="https://www.linkedin.com/in/nat-diaz/">
+                  <a
+                    href="https://www.linkedin.com/in/nat-diaz/"
+                    target="_blank"
+                  >
                     <Button className="linkedInButton">LinkedIn</Button>
                   </a>
                 </CardBody>
@@ -139,7 +148,10 @@ class AboutUs extends Component {
                     Canva pro and music producer guy. Entertained by comedy and
                     designed.
                   </CardText>
-                  <a href="https://www.linkedin.com/in/zprunella/">
+                  <a
+                    href="https://www.linkedin.com/in/zprunella/"
+                    target="_blank"
+                  >
                     <Button className="linkedInButton">LinkedIn</Button>
                   </a>
                 </CardBody>
