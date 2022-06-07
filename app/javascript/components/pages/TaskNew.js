@@ -80,7 +80,7 @@ class TaskNew extends Component {
                   onClick={this.handleSubmit}
                   className="button submitButton"
                 >
-                  Submit New Task
+                  Submit Task
                 </Button>
               </Form>
             </Col>

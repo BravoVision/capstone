@@ -16,8 +16,8 @@ class TaskEdit extends Component {
     this.state = {
       errors: {},
       updateTask: {
-        title: "",
-        details: "",
+        title: props.task?.title || "",
+        details: props.task?.details || "",
         user_id: this.props.current_user.id,
       },
       submitted: false,
@@ -55,7 +55,11 @@ class TaskEdit extends Component {
                   <Label for="title" className="formLabel">
                     Title
                   </Label>
-                  <Input type="text" name="title" onChange={this.handleInput} />
+                  <Input 
+                    type="text" 
+                    name="title" 
+                    onChange={this.handleInput} 
+                    value={this.state.updateTask.title} />
                   {this.state.errors.title && (
                     <div className="errorDisplay">
                       {this.state.errors.title[0]}
@@ -70,6 +74,7 @@ class TaskEdit extends Component {
                     type="textarea"
                     name="details"
                     onChange={this.handleInput}
+                    value={this.state.updateTask.details} 
                   />
                   {this.state.errors.details && (
                     <div className="errorDisplay">
