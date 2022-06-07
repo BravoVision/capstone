@@ -46,7 +46,7 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 ## Tech Stack
 
-<p float="center">
+<p float="left">
 <img src="https://seeklogo.com/images/C/canva-logo-B4BE25729A-seeklogo.com.png" alt="Canva logo" width="100px">
 <img src="https://www.svgrepo.com/show/354259/react.svg" alt="React logo" width="100px">
 <img src="https://www.svgrepo.com/show/354252/rails.svg" alt="Rails logo" width="100px">
