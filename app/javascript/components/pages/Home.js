@@ -28,20 +28,14 @@ class Home extends Component {
                   eventually.
                 </h4>
               </div>
-
               <br />
-
               <div className="btnDiv">
                 <a href={sign_in_route}>
-                  <Button className="button">
-                    Sign In
-                  </Button>
+                  <Button className="button">Sign In</Button>
                 </a>
 
                 <a href={new_user_route}>
-                  <Button className="button">
-                    Sign Up
-                  </Button>
+                  <Button className="button">Sign Up</Button>
                 </a>
               </div>
             </Col>

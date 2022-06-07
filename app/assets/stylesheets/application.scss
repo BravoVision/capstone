@@ -1,5 +1,4 @@
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
 
 body {
@@ -49,7 +48,6 @@ a {
 .field {
   color: white;
 }
-
 
 
 //  Header Styling
@@ -112,7 +110,6 @@ a {
   font-size: 4rem;
   text-align: center;
   font-family: 'Joti One', cursive;
-  // text-shadow: 1px 2px lightgrey;
 }
 
 .homeText {
@@ -334,7 +331,7 @@ div.eyes {
   background-color: #ffd230;
 }
 
-// Task New Styling
+// Task New/Edit Styling
 
 .center-form {
   display: flex;
