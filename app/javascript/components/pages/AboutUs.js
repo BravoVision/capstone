@@ -146,7 +146,7 @@ class AboutUs extends Component {
                   </CardSubtitle>
                   <CardText className="cardText">
                     Canva pro and music producer guy. Entertained by comedy and
-                    designed.
+                    design.
                   </CardText>
                   <a
                     href="https://www.linkedin.com/in/zprunella/"

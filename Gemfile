@@ -77,8 +77,6 @@ gem "bootstrap", "~> 5.1"
 
 gem "pry", "~> 0.13.1"
 
-gem "hash_dot", "~> 2.1"
-
 gem "rufo"
 
 
