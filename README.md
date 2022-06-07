@@ -1,5 +1,6 @@
 # "Eventually..." Web Application
 
+<p>&nbsp;</p>
 
 ## App Description
 
@@ -13,7 +14,7 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 **Visit the Deployed App @:  https://young-falls-79405.herokuapp.com/**
 
-
+<p>&nbsp;</p>
 
 ## Getting Started
 
@@ -28,19 +29,18 @@ Come to the place that helps you keep track of life and handle things, eventuall
         $ rails db:setup
         $ rails db:migrate
 
-
+<p>&nbsp;</p>
 
 ## Dependencies
 
-
+| Devise        | RSpec         | Enzyme     |
 | ------------- |:-------------:| ----------:|
 | Webpacker     | Prettier      | Rufo       |
 | ReactStrap    | React-DOM     | PRY        |
-| Devise        | RSpec         | Enzyme     |
 
 
 
-
+<p>&nbsp;</p>
 ## Tech Stack
 
 <p float="left">
@@ -53,7 +53,7 @@ Come to the place that helps you keep track of life and handle things, eventuall
 </p>
 
 
-
+<p>&nbsp;</p>
 
 ## Unauthenticated User Experience
 
@@ -64,7 +64,7 @@ An unauthenticated user can access the following:
 - Sign Up Link
 - About Us Page
 
-
+<p>&nbsp;</p>
 
 ## Authenticated User Experience
 
