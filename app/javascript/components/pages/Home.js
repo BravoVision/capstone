@@ -23,7 +23,7 @@ class Home extends Component {
 
               <div className="homeText">
                 <h3>Your personal online to-do list.</h3>
-                <h4>
+                <h4 id="homeSubText">
                   A Place to keep track of life, and handle things...
                   eventually.
                 </h4>

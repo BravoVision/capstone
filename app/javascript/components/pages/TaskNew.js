@@ -39,7 +39,7 @@ class TaskNew extends Component {
       <div>
         <Container className="center-form">
           <Col xs="8" sm="8" md="6" lg="6" xl="6">
-          <h1>Enter 'New Task' info</h1>
+          <h1>Enter New Task</h1>
           <br />
           <Form>
             <FormGroup>
