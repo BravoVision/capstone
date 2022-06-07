@@ -32,7 +32,7 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 ## Dependencies
 
-|               | Dependencies  |            |
+
 | ------------- |:-------------:| ----------:|
 | Webpacker     | Prettier      | Rufo       |
 | ReactStrap    | React-DOM     | PRY        |
