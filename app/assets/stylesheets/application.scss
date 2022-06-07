@@ -103,6 +103,10 @@ a {
   width: 100%;
   margin-left: 2rem;
   box-shadow: 0px 0px 25px lightblue;
+
+  @media(max-width: 768px){
+    margin-left: 0;
+  }
 }
 
 #eventuallyHeader {
@@ -345,7 +349,13 @@ div.eyes {
   margin-top: 1rem;
   font-weight: bold;
   font-size: 1rem;
-  width: 10rem;
+  width: 33%;
+
+  @media(max-width: 1024px){
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+  }
 }
 
 .newHeader {

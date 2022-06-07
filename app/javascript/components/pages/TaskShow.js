@@ -17,6 +17,9 @@ class TaskShow extends Component {
 
   render() {
     let { task } = this.props;
+    if (!task) {
+      return null
+    }
 
     return (
       <>
