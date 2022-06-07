@@ -1,5 +1,6 @@
 # "Eventually..." Web Application
 
+
 ## App Description
 
 Why do today what you can put off until tomorrow?
@@ -11,6 +12,7 @@ If your ability to remember song lyrics from the 90’s is better than your abil
 Come to the place that helps you keep track of life and handle things, eventually…
 
 **Visit the Deployed App @:  https://young-falls-79405.herokuapp.com/**
+
 
 
 ## Getting Started
@@ -27,9 +29,10 @@ Come to the place that helps you keep track of life and handle things, eventuall
         $ rails db:migrate
 
 
+
 ## Dependencies
 
-|                 Dependencies               |
+|               | Dependencies  |            |
 | ------------- |:-------------:| ----------:|
 | Webpacker     | Prettier      | Rufo       |
 | ReactStrap    | React-DOM     | PRY        |
@@ -37,10 +40,11 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 
 
+
 ## Tech Stack
 
 <p float="left">
-<img src="https://www.svgrepo.com/show/305835/canva.svg" alt="Canva logo" width="100px" background-color="white">
+<img src="https://seeklogo.com/images/C/canva-logo-B4BE25729A-seeklogo.com.png" alt="Canva logo" width="100px">
 <img src="https://www.svgrepo.com/show/354259/react.svg" alt="React logo" width="100px">
 <img src="https://www.svgrepo.com/show/354252/rails.svg" alt="Rails logo" width="100px">
 <img src="https://raw.github.com/plataformatec/devise/master/devise.png" alt="Devise logo" width="100px">
@@ -50,20 +54,23 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 
 
+
 ## Unauthenticated User Experience
 
 An unauthenticated user can access the following:
 
-- Home Page
+- Landing Page
 - Sign In Link 
 - Sign Up Link
 - About Us Page
+
+
 
 ## Authenticated User Experience
 
 An authenticated user can access the following:
 
-- Home Page
+- User Page
 - Sign Out Link 
 - About Us Page
 - Full CRUD (listed below)
@@ -83,6 +90,7 @@ An authenticated user can access the following:
 **Delete**
 
 - Delete a Task
+
 
 
 ## Development Team
