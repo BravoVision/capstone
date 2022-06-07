@@ -23,11 +23,13 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 - CD into the folder 
 
-- Use the following commands to setup the application: 
+- Use the following commands to setup the application:
+``` 
         $ bundle
         $ yarn 
         $ rails db:setup
         $ rails db:migrate
+```
 
 <p>&nbsp;</p>
 
@@ -41,9 +43,10 @@ Come to the place that helps you keep track of life and handle things, eventuall
 
 
 <p>&nbsp;</p>
+
 ## Tech Stack
 
-<p float="left">
+<p float="center">
 <img src="https://seeklogo.com/images/C/canva-logo-B4BE25729A-seeklogo.com.png" alt="Canva logo" width="100px">
 <img src="https://www.svgrepo.com/show/354259/react.svg" alt="React logo" width="100px">
 <img src="https://www.svgrepo.com/show/354252/rails.svg" alt="Rails logo" width="100px">
@@ -91,7 +94,7 @@ An authenticated user can access the following:
 
 - Delete a Task
 
-
+<p>&nbsp;</p>
 
 ## Development Team
 
