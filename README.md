@@ -29,7 +29,10 @@ Come to the place that helps you keep track of life and handle things, eventuall
         $ yarn 
         $ rails db:setup
         $ rails db:migrate
+        $ rails s
 ```
+
+- Open your browser and enter **localhost:3000** into the web address bar to see the app running from your local device.
 
 <p>&nbsp;</p>
 
