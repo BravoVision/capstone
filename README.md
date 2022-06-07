@@ -19,7 +19,9 @@ Come to the place that helps you keep track of life and handle things, eventuall
 ## Getting Started
 
 - Use this command if you don't have the repository (folder) on your local machine:
+```
         $ git clone https://github.com/BravoVision/capstone.git 
+```
 
 - CD into the folder 
 
