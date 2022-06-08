@@ -23,17 +23,17 @@ class AboutUs extends Component {
 
           <p className="aboutPara">
             {" "}
-            Navigate over to “Eventually” and take a look at your new favorite
-            web application that helps with creating a simple to-do list for
-            your everyday needs. No need to feel overwhelmed about remembering
-            to do research for that 12-page paper due in 2 days, and no more
-            forgetting to feed the dog (maybe?!).
+            Your new favorite web application, "Eventually...", helps with creating a simple to-do list for your everyday needs.
             <br />
             <br />
-            Sign up for “Eventually”, add your tasks, update them as needed,
-            check them off or delete them when you’re done… done being bothered
-            with doing the things.Come to the place that helps you keep track of
-            life and handle things, eventually…
+            If your ability to remember song lyrics from the 90’s is better than
+            your ability to remember why you walked into the kitchen, then this
+            is the app for you! Sign up, add your tasks, update them as needed,
+            and delete them when you're no longer bothered with doing stuff.
+            <br />
+            <br />
+            Come to the place that helps you keep track of life and handle
+            things, eventually…
           </p>
         </Container>
 
@@ -58,7 +58,7 @@ class AboutUs extends Component {
                   </CardSubtitle>
 
                   <CardText className="cardText">
-                    Grill master and a real good dude. Lets see if we can get to
+                    Grill master and a real good dude. Real tired Marine. Lets see if we can get to
                     Super Saiyan Blue!!
                   </CardText>
                   <a
@@ -145,8 +145,7 @@ class AboutUs extends Component {
                     Design Lead
                   </CardSubtitle>
                   <CardText className="cardText">
-                    Canva pro and music producer guy. Entertained by comedy and
-                    design.
+                    Canva pro and music producer. Lover of comedy and design. Will watch any movie you recommend. 
                   </CardText>
                   <a
                     href="https://www.linkedin.com/in/zprunella/"
